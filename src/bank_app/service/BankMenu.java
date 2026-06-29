@@ -10,6 +10,7 @@ public class BankMenu {
     private final TransactionService transactionService;
     private Scanner scanner;
 
+    //Inyección de la interface por constructor para no tener acoplamiento y que el usuario decida que implementación usar
     public BankMenu(TransactionService transactionService, User user) {
         this.transactionService = transactionService;
         this.user = user;
