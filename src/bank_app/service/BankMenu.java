@@ -9,6 +9,7 @@ public class BankMenu {
     private final User user;
     private final TransactionService transactionService;
     private Scanner scanner;
+    Integer a;
 
     //Inyección de la interface por constructor para no tener acoplamiento y que el usuario decida que implementación usar
     public BankMenu(TransactionService transactionService, User user) {
