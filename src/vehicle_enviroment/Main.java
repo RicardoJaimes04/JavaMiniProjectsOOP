@@ -4,20 +4,26 @@ import vehicle_enviroment.enums.CarType;
 import vehicle_enviroment.models.*;
 import vehicle_enviroment.services.Garage;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Vehicle myCar= new Car("Renault", "Stepway", 2022, CarType.TRUCK);
         Vehicle myElectricCar = new ElectricCar("Tesla", "model 3", 2025, CarType.SPORT, 89);
+
+        List<Vehicle> listVehicles = new ArrayList<>(Arrays.asList(myCar,myElectricCar));
 
         myCar.start();
         myElectricCar.start();
 
         System.out.println(myCar.toString());
         System.out.println(myElectricCar.toString());
+
         ((ElectricCar) myElectricCar).chargeBattery();;
 
-        System.out.println(myCar.toString());
-        System.out.println(myElectricCar.toString());
+        System.out.println(listVehicles);
 
         ((ElectricCar) myElectricCar).setBatteryLevel(43);
 
@@ -31,6 +37,15 @@ public class Main {
         garage1.startAllVehicles();
         garage1.chargeAllElectricCars();
         garage1.listVehicles();
+
+        System.out.println("=====ITERATOR=====");
+
+        garage1.updateVehicle("Stepway", "new Stepway");
+        garage1.removeVehicle("model 3");
+
+        garage1.listVehicles();
+
+
 
     }
 

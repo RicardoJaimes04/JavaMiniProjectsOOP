@@ -6,6 +6,7 @@ import vehicle_enviroment.models.Vehicle;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.ListIterator;
 
 public class Garage {
 
@@ -68,5 +69,42 @@ public class Garage {
             }
         }
     }
+
+    //METODOS CON ITERATOR (JAVA YA IMPLEMENTA LA MAYORIA POR DEFECTO EN LAS COLECCIONES)
+
+    public void removeAllVehicles(){
+        //Esto funciona como un for each
+        ListIterator<Vehicle> iterator = vehicles.listIterator();
+        while(iterator.hasNext()){
+            //Remove el actual
+            iterator.next();
+            iterator.remove();
+        }
+    }
+
+    public void removeVehicle( String name){
+        ListIterator<Vehicle> iterator = vehicles.listIterator();
+        //iterator.next() avanza a la siguiente posición y la devuelve
+        while(iterator.hasNext()){
+            Vehicle vehicle = iterator.next();
+            if(vehicle.getModel().equals(name)){
+                //No necesito pasarle cual remover
+                iterator.remove();
+            }
+        }
+    }
+
+    public void updateVehicle( String oldmodel, String newModel){
+        ListIterator<Vehicle> iterator = vehicles.listIterator();
+        while(iterator.hasNext()){
+            Vehicle vehicle = iterator.next();
+            if(vehicle.getModel().equals(oldmodel)){
+                //Si lo quisiera reemplazar por un objeto distinto ahí si usaria el iterador
+                vehicle.setModel(newModel);
+                break;
+            }
+        }
+    }
+
 
 }
