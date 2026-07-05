@@ -13,7 +13,7 @@ public class Main {
         Vehicle myCar= new Car("Renault", "Stepway", 2022, CarType.TRUCK);
         Vehicle myElectricCar = new ElectricCar("Tesla", "model 3", 2025, CarType.SPORT, 89);
 
-        List<Vehicle> listVehicles = new ArrayList<>(Arrays.asList(myCar,myElectricCar));
+        List<Vehicle> listVehicles = new ArrayList<>(List.of(myCar,myElectricCar));
 
         myCar.start();
         myElectricCar.start();
@@ -22,6 +22,7 @@ public class Main {
         System.out.println(myElectricCar.toString());
 
         ((ElectricCar) myElectricCar).chargeBattery();;
+
 
         System.out.println(listVehicles);
 
