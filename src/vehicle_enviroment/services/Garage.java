@@ -41,10 +41,6 @@ public class Garage {
         }
     }
 
-    public boolean removeVehicle(Vehicle vehicle){
-        return vehicles.remove(vehicle);
-    }
-
     public void listVehicles(){
         for(Vehicle vehicle : vehicles){
             System.out.println(vehicle);

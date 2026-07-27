@@ -1,6 +1,7 @@
-package bank_app.service;
+package bank_app.ui;
 
 import bank_app.model.User;
+import bank_app.service.TransactionService;
 
 import java.util.Scanner;
 

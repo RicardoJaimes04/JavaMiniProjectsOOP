@@ -1,7 +1,6 @@
 package bank_app.ui;
 
 import bank_app.model.User;
-import bank_app.service.BankMenu;
 import bank_app.service.TransactionService;
 import bank_app.service.TransactionServiceImpl;
 

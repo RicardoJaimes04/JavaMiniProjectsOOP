@@ -1,4 +1,4 @@
-package student_app;
+package student_app.ui;
 
 import student_app.service.StudentRegistrationSystem;
 
