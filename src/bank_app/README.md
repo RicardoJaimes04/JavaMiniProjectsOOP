@@ -5,7 +5,7 @@ Mini aplicación desarrollada en **Java** para practicar los fundamentos de la P
 
 ## 📋 Descripción
 
-La aplicación simula un sistema bancario básico desde la consola, permitiendo realizar operaciones sobre una cuenta de usuario mediante un menú interactivo.
+La aplicación simula un sistema bancario desde la consola, permitiendo realizar operaciones sobre una cuenta de usuario mediante un menú interactivo.
 
 El proyecto está organizado siguiendo una estructura sencilla de capas (`model`, `service` y `ui`) para separar las responsabilidades del código.
 
