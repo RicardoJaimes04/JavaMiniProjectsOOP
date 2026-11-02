@@ -32,7 +32,6 @@ public class Garage {
     }
 
     public boolean addVehicle(Vehicle vehicle){
-
         if(vehicles.size()<capacity){
             vehicles.add(vehicle);
             return true;

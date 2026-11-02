@@ -70,6 +70,7 @@ public class BankMenu {
             case 4:
                 return;
         }
+        System.out.println("¡Ingresa una opción válida!");
     }
 
 
